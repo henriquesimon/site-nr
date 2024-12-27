@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  body {
+  }
+
+  header {
+    width: 80vw;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .menu-item a {
+    font-size: 1em;
+  }
+
+  div#dash > span.material-icons a {
+    font-size: 35px;
+  }
+
+  main {
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main > div#procedimentos {
+    width: 90vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .proc-impar {
+    width: 90vw;
+  }
+
+  .proc-par {
+    width: 90vw;
+  }
+
+  footer div.container {
+    width: 100vw;
+    padding-inline: 30px;
+  }
+}
