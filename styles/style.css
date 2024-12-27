@@ -23,7 +23,6 @@ body,
 html {
   background-color: white;
   align-items: center;
-  justify-content: center;
   display: flex;
   flex-direction: column;
 }
@@ -32,7 +31,6 @@ header {
   padding-left: 10%;
   padding-right: 10%;
   height: 120px;
-  background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,9 +40,9 @@ header {
 
 main {
   width: 98.9vw;
-  height: 99vh;
-  background-color: white;
-  border-top: 2px solid var(--cor-principal);
+  height: fit-content;
+  border-top: thin solid var(--cor-principal);
+  border-bottom: thin solid var(--cor-principal);
   display: flex;
   justify-content: center;
 }
@@ -58,7 +56,7 @@ header > div.cont {
 }
 
 header > div#logo {
-  background: white url("../assets/NRLogo.png") no-repeat;
+  background: url("../assets/NRLogo.png") no-repeat;
   background-size: contain;
   width: 15%;
   height: 80%;
@@ -94,7 +92,6 @@ div#menu-container > div.menu-item {
 }
 
 header > div#dash {
-  background-color: white;
   width: 20%;
   display: flex;
   align-items: center;
@@ -114,8 +111,8 @@ div#dash > span.material-icons a:hover {
 /*main*/
 
 main > div#procedimentos {
-  height: 100vh;
   width: 50vw;
+  padding-bottom: 30px;
 }
 
 .proc-impar {
@@ -198,15 +195,14 @@ main > div#procedimentos {
   height: 40px;
   border-radius: 25px;
   font-family: var(--fonte-btn);
-  color: white;
-  font-weight: 200;
+  font-weight: 300;
   background-color: var(--cor-principal);
   border: none;
 }
 
 .btn-agendar:hover {
-  color: var(--cor-hover);
   background-color: white;
+  color: var(--cor-hover);
   border: thin solid var(--cor-hover);
   font-weight: 500;
 }
@@ -215,4 +211,71 @@ main > div#procedimentos {
   border-bottom: thin solid var(--cor-principal);
   width: 100%;
   margin-bottom: 8%;
+}
+
+footer {
+  height: 300px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer div.container {
+  margin-top: 0px;
+  height: 200px;
+  width: 60vw;
+  display: flex;
+  border-bottom: thin solid var(--cor-principal);
+}
+
+footer div.esquerda {
+  width: 50%;
+}
+footer div.direita {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer section {
+  padding-left: 5px;
+  flex-direction: column;
+  display: flex;
+  width: 30%;
+  height: 100%;
+}
+
+footer section#contato {
+  width: 80%;
+}
+
+footer h1 {
+  font-size: 1.2em;
+  font-family: var(--fonte-padrao);
+  color: var(--cor-hover);
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+footer a {
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: grey;
+  font-size: 1em;
+}
+div#trademark {
+  margin-top: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+div#trademark p {
+  font-family: var(--fonte-padrao);
+  color: var(--cor-principal);
+  font-weight: 300;
+  font-size: small;
+  margin-top: 0px;
+  margin-bottom: 30px;
 }
