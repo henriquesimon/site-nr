@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --cor-principal: #d9a2a2;
+  --cor-hover: #e79090;
+  --cor-texto: #755044;
+
+  --fonte-padrao: "Inter";
+  --fonte-h1: "Cormorant Garamond";
+  --fonte-btn: "Montserrat Alternates";
+}
+
+/*geral*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body,
+html {
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 120px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50vw;
+  margin-bottom: 10px;
+}
+
+main {
+  width: 98.9vw;
+  height: 99vh;
+  background-color: white;
+  border-top: 2px solid var(--cor-principal);
+  display: flex;
+  justify-content: center;
+}
+
+/*cabeçalho*/
+header > div.cont {
+  height: 100px;
+  width: 60%;
+  margin-right: 10px;
+  flex-direction: row;
+}
+
+header > div#logo {
+  background: white url("../assets/NRLogo.png") no-repeat;
+  background-size: contain;
+  width: 15%;
+  height: 80%;
+}
+
+div#menu-container {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+div#menu-container > div.menu-item {
+  width: auto;
+  display: flex;
+  padding: 5px;
+  margin: 5px;
+  align-items: center;
+}
+
+.menu-item a {
+  color: var(--cor-principal);
+  width: auto;
+  height: 20px;
+  text-align: center;
+  font-family: var(--fonte-padrao);
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.menu-item a:hover {
+  text-decoration: underline;
+}
+
+header > div#dash {
+  background-color: white;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+div#dash > span.material-icons a {
+  text-decoration: none;
+  color: var(--cor-principal);
+  font-size: 50px;
+}
+
+div#dash > span.material-icons a:hover {
+  color: var(--cor-hover);
+}
+
+/*main*/
+
+main > div#procedimentos {
+  height: 100vh;
+  width: 50vw;
+}
+
+.proc-impar {
+  margin-top: 3%;
+  display: flex;
+  width: 50vw;
+  height: 390px;
+  align-items: center;
+  justify-content: flex-start;
+  border: 0.1px solid var(--cor-principal);
+}
+
+.proc-impar figure {
+  width: 50%;
+  height: 100%;
+}
+.proc-impar img {
+  width: 100%;
+  height: 100%;
+}
+
+.proc-impar section {
+  width: 35%;
+  margin-left: 10%;
+}
+
+.proc-impar h1 {
+  font-family: var(--fonte-h1);
+  margin-bottom: 8%;
+  color: var(--cor-texto);
+}
+
+.proc-impar p {
+  font-family: var(--fonte-padrao);
+  margin-bottom: 8%;
+  font-weight: 300;
+  color: var(--cor-texto);
+}
+
+.proc-par {
+  margin-top: 3%;
+  display: flex;
+  width: 50vw;
+  height: 390px;
+  align-items: center;
+  justify-content: flex-start;
+  border: 0.1px solid var(--cor-principal);
+  flex-direction: row-reverse;
+}
+
+.proc-par figure {
+  width: 50%;
+  height: 100%;
+}
+.proc-par img {
+  width: 100%;
+  height: 100%;
+}
+
+.proc-par section {
+  width: 35%;
+  margin-right: 10%;
+}
+
+.proc-par h1 {
+  font-family: var(--fonte-h1);
+  margin-bottom: 8%;
+  color: var(--cor-texto);
+}
+
+.proc-par p {
+  font-family: var(--fonte-padrao);
+  margin-bottom: 8%;
+  font-weight: 300;
+  color: var(--cor-texto);
+}
+
+.btn-agendar {
+  width: 120px;
+  height: 40px;
+  border-radius: 25px;
+  font-family: var(--fonte-btn);
+  color: white;
+  font-weight: 200;
+  background-color: var(--cor-principal);
+  border: none;
+}
+
+.btn-agendar:hover {
+  color: var(--cor-hover);
+  background-color: white;
+  border: thin solid var(--cor-hover);
+  font-weight: 500;
+}
+
+.line {
+  border-bottom: thin solid var(--cor-principal);
+  width: 100%;
+  margin-bottom: 8%;
+}
