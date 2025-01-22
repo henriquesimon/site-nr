@@ -1,49 +1,78 @@
 @charset "UTF-8";
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  * {
-    margin: 0px;
-    padding: 0px;
-  }
-  body {
-  }
-
   header {
-    width: 80vw;
-    margin-left: 15%;
-    margin-right: 15%;
+    width: 94vw;
   }
 
-  .menu-item a {
-    font-size: 1em;
-  }
-
-  div#dash > span.material-icons a {
-    font-size: 35px;
+  menu {
+    width: 94vw;
   }
 
   main {
-    width: 100vw;
+    width: 94vw;
+    padding-bottom: 20px;
+  }
+
+  .proc-impar {
+    display: flex;
+    height: 300px;
+    border-radius: 0px;
+  }
+
+  .proc-impar figure {
+    height: 300px;
+    padding-top: 0px;
+    margin-right: 20px;
+  }
+
+  .proc-impar img {
+    width: 350px;
+    height: 300px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  .proc-impar section {
+    padding: 0px;
+    height: 300px;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .proc-par {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 300px;
+    border-radius: 0px;
+    padding: 0%;
+  }
+
+  .proc-par figure {
+    height: 300px;
+    padding-top: 0px;
+  }
+
+  .proc-par img {
+    width: 350px;
+    height: 300px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin: 0px;
+  }
+
+  .proc-par section {
+    padding: 0px;
+    height: 300px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
 
   main > div#procedimentos {
-    width: 90vw;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .proc-impar {
-    width: 90vw;
-  }
-
-  .proc-par {
-    width: 90vw;
-  }
-
-  footer div.container {
-    width: 100vw;
-    padding-inline: 30px;
+    padding: 0px;
   }
 }

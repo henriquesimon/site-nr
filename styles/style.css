@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Hubballi&display=swap");
+
 :root {
   --cor-principal: #d9a2a2;
   --cor-hover: #e79090;
@@ -9,7 +10,7 @@
 
   --fonte-padrao: "Inter";
   --fonte-h1: "Cormorant Garamond";
-  --fonte-btn: "Montserrat Alternates";
+  --fonte-btn: "Hubballi";
 }
 
 /*geral*/
@@ -17,58 +18,59 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 body,
 html {
+  height: 100vh;
   background-color: white;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
 }
 
 /*cabeçalho*/
 
 header {
-  padding-left: 80px;
-  padding-right: 80px;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  min-width: 700px;
+  text-align: center;
+  display: block;
+  width: 96vw;
+  margin: auto;
 }
 
-header > div.cont {
-  height: 100px;
-  width: 60%;
-  margin-right: 10px;
-  flex-direction: row;
-}
-
-header > div#logo {
+div#logo {
+  display: none;
   background: url("../assets/NRLogo.png") no-repeat;
   background-size: contain;
-  width: 15%;
-  height: 80%;
 }
 
-div#menu-container {
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
+span#burguer {
+  color: var(--cor-principal);
+  font-size: 30px;
+  display: block;
+  height: 40px;
+  width: 96vw;
+  margin: auto;
 }
 
-div#menu-container > div.menu-item {
-  width: auto;
-  display: flex;
-  padding: 5px;
-  margin: 5px;
-  align-items: center;
+span#burguer:hover {
+  color: white;
+  background-color: var(--cor-hover);
+  cursor: pointer;
 }
 
-.menu-item a {
+menu {
+  display: none;
+  padding-block: 10px;
+}
+
+menu > ul {
+  list-style-type: none;
+}
+
+menu li {
+  padding-bottom: 5px;
+}
+
+menu a {
   color: var(--cor-principal);
   width: auto;
   height: 20px;
@@ -76,18 +78,15 @@ div#menu-container > div.menu-item {
   font-family: var(--fonte-padrao);
   font-weight: 300;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.9em;
 }
 
-.menu-item a:hover {
+menu a:hover {
   text-decoration: underline;
 }
 
 header > div#dash {
-  width: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: end;
+  display: none;
 }
 
 div#dash > span.material-icons a {
@@ -103,100 +102,94 @@ div#dash > span.material-icons a:hover {
 /*main*/
 
 main {
-  min-width: 98.9vw;
+  width: 96vw;
   height: fit-content;
   border-top: thin solid var(--cor-principal);
   border-bottom: thin solid var(--cor-principal);
-  display: flex;
-  justify-content: center;
+  margin: auto;
 }
 
 main > div#procedimentos {
-  width: 50vw;
-  padding-bottom: 30px;
+  padding: 20px;
 }
 
 .proc-impar {
+  text-align: center;
   margin-top: 3%;
-  display: flex;
-  min-width: 700px;
-  height: 390px;
-  align-items: center;
-  justify-content: flex-start;
-  border: 0.1px solid var(--cor-principal);
+  display: block;
+  border: thin solid var(--cor-principal);
+  border-radius: 19px;
 }
 
 .proc-impar figure {
-  width: 50%;
-  height: 100%;
+  padding-top: 10px;
+  height: 40%;
 }
 .proc-impar img {
-  width: 100%;
-  height: 100%;
+  width: 84vw;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
 .proc-impar section {
-  width: 35%;
-  margin-left: 10%;
+  height: 40%;
+  padding: 15px;
 }
 
 .proc-impar h1 {
   font-family: var(--fonte-h1);
-  margin-bottom: 8%;
   color: var(--cor-texto);
 }
 
 .proc-impar p {
   font-family: var(--fonte-padrao);
-  margin-bottom: 8%;
   font-weight: 300;
   color: var(--cor-texto);
+  margin-bottom: 15px;
 }
 
 .proc-par {
+  text-align: center;
   margin-top: 3%;
-  display: flex;
-  min-width: 700px;
-  height: 390px;
-  align-items: center;
-  justify-content: flex-start;
-  border: 0.1px solid var(--cor-principal);
-  flex-direction: row-reverse;
+  display: block;
+  border: thin solid var(--cor-principal);
+  border-radius: 15px;
 }
 
 .proc-par figure {
-  width: 50%;
-  height: 100%;
+  padding-top: 10px;
+  height: 40%;
 }
 .proc-par img {
-  width: 100%;
-  height: 100%;
+  width: 290px;
+  border-top-left-radius: 12.5px;
+  border-top-right-radius: 12.5px;
 }
 
 .proc-par section {
-  width: 35%;
-  margin-right: 10%;
+  height: 40%;
+  padding: 15px;
 }
 
 .proc-par h1 {
   font-family: var(--fonte-h1);
-  margin-bottom: 8%;
   color: var(--cor-texto);
 }
 
 .proc-par p {
   font-family: var(--fonte-padrao);
-  margin-bottom: 8%;
   font-weight: 300;
   color: var(--cor-texto);
+  margin-bottom: 15px;
 }
 
 .btn-agendar {
-  width: 120px;
+  width: 40vw;
   height: 40px;
   border-radius: 25px;
   font-family: var(--fonte-btn);
   font-weight: 300;
+  font-size: 1.5em;
   background-color: var(--cor-principal);
   border: none;
 }
@@ -210,55 +203,48 @@ main > div#procedimentos {
 
 .line {
   border-bottom: thin solid var(--cor-principal);
-  width: 100%;
   margin-bottom: 8%;
 }
 
 footer {
+  padding: 20px;
+  width: 96vw;
   height: 300px;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  text-align: center;
+  margin: auto;
 }
 
-footer div.container {
-  margin-top: 0px;
-  height: 200px;
-  width: 60vw;
-  display: flex;
+footer .container {
+  height: 320px;
+  display: block;
   border-bottom: thin solid var(--cor-principal);
 }
 
 footer div.esquerda {
-  width: 50%;
+  display: none;
 }
 footer div.direita {
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  display: block;
+  text-align: center;
 }
 
 footer section {
-  padding-left: 5px;
   flex-direction: column;
   display: flex;
-  width: 30%;
   height: 100%;
+  margin-bottom: 20px;
 }
 
-footer section#contato {
-  width: 80%;
+footer #cursos {
+  display: none;
 }
 
 footer h1 {
   font-size: 1.2em;
   font-family: var(--fonte-padrao);
   color: var(--cor-hover);
-  font-weight: 400;
-  padding-bottom: 10px;
+  font-weight: bold;
 }
 footer a {
   margin-bottom: 10px;
@@ -266,17 +252,18 @@ footer a {
   color: grey;
   font-size: 1em;
 }
+
 div#trademark {
-  margin-top: 0px;
-  align-items: flex-start;
-  justify-content: flex-start;
+  display: block;
+  margin-top: 80px;
+  text-align: center;
+  padding-bottom: 35px;
 }
 
 div#trademark p {
   font-family: var(--fonte-padrao);
   color: var(--cor-principal);
   font-weight: 300;
-  font-size: small;
-  margin-top: 0px;
-  margin-bottom: 30px;
+  font-size: 1.2em;
+  display: block;
 }
